@@ -8,9 +8,11 @@ from engine.globals import poll_events as _poll
 
 def when(command, context=None, **kwargs):
     """Decorator for command functions."""
+
     def dec(func):
         _register(command, func, context, kwargs)
         return func
+
     return dec
 
 
