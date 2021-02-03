@@ -3,7 +3,7 @@ import logging
 
 from adventurelib import when as _when
 
-from engine.globals import poll_events as _poll
+from whimsylib.globals import poll_events as _poll
 
 
 def when(command, context=None, **kwargs):

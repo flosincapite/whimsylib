@@ -1,8 +1,8 @@
-from engine import bag
-from engine.globals import G
-from engine import item
-from engine import say
-from engine import tartarus
+from whimsylib import bag
+from whimsylib.globals import G
+from whimsylib import item
+from whimsylib import say
+from whimsylib import tartarus
 
 
 class _Statistic:

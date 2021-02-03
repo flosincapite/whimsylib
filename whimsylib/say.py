@@ -4,7 +4,7 @@ import re
 import adventurelib
 import zalgo_text
 
-from engine.globals import G
+from whimsylib.globals import G
 
 
 _Z = zalgo_text.zalgo()

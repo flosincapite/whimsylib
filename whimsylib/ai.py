@@ -2,7 +2,7 @@ import collections
 import copy
 import random
 
-from engine.globals import G as _G
+from whimsylib.globals import G as _G
 
 
 # Action types.

@@ -2,8 +2,8 @@ import logging
 
 from adventurelib import Bag as _Bag
 
-from engine.globals import G as _G
-from engine import say
+from whimsylib.globals import G as _G
+from whimsylib import say
 
 
 class Bag(_Bag):

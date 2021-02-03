@@ -1,8 +1,8 @@
 import collections
 
 
-from engine import bag
-from engine.globals import G as _G
+from whimsylib import bag
+from whimsylib.globals import G as _G
 
 
 class Room:
