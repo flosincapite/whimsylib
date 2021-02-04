@@ -2,7 +2,7 @@ import random
 import re
 
 import adventurelib
-import zalgo_text
+import zalgo as zalgo_text
 
 from whimsylib.globals import G
 
