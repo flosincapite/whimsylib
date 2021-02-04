@@ -1,3 +1,5 @@
+[![PyPi version](https://img.shields.io/pypi/v/whimsylib.svg)](https://pypi.org/project/whimsylib/)
+
 # whimsylib
 
 A game engine for text-based games, inspired by [adventurelib](https://github.com/lordmauve/adventurelib).
