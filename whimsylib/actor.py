@@ -152,10 +152,8 @@ class Actor:
         for statistic in statistics:
             self._statistics[statistic.name] = statistic
             statistic.owner = self
-        self._ai = kwargs.pop("ai", None)
-        if self._ai is not None:
-            self._ai.owner = self
-        self._idle_text = kwargs.pop("idle_text", None)
+        self.ai = kwargs.pop("ai", None)
+        self.idle_text = kwargs.pop("idle_text", None)
         self._death_throes = lambda this: None
         self._inventory = bag.Bag()
         self._read_books = set()
@@ -170,6 +168,12 @@ class Actor:
     def ai(self):
         return self._ai
 
+    @ai.setter
+    def ai(self, new_ai):
+        self._ai = new_ai
+        if self._ai is not None:
+            self._ai.owner = self
+
     @property
     def inventory(self):
         # TODO: Would be good if player's inventory always alerted when an item
@@ -183,6 +187,10 @@ class Actor:
     @property
     def idle_text(self):
         return self._idle_text
+
+    @idle_text.setter
+    def idle_text(self, new_idle_text):
+        self._idle_text = new_idle_text
 
     def add_ability(self, ability):
         # TODO: "You" vs. name problem as always.
