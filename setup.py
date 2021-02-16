@@ -10,7 +10,7 @@ requirements = [f"{r.split('/')[-3]} @ {r}" for r in requirements]
 
 setuptools.setup(
     name="whimsylib",
-    version="0.0.6",
+    version="0.1.0",
     author="The Arch Cronenbrogues",
     author_email="cronenbrogues@googlegroups.com",
     description="A generic game engine for text-based games, inspired by adventurelib.",
