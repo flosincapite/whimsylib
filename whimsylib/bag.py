@@ -45,7 +45,7 @@ class Bag(set):
             say.insayne(message)
 
     def add(self, item, message=None):
-        set.add(self, item)
+        super().add(item)
         self._add_aliases(item, message)
 
     def find(self, name):
@@ -59,7 +59,7 @@ class Bag(set):
             return element
 
     def remove(self, item, message=None):
-        set.remove(self, item)
+        super().remove(item)
         self._discard_aliases(item, message)
 
     def clear(self):
@@ -67,7 +67,7 @@ class Bag(set):
         self._alias_dict.clear()
 
     def copy(self):
-        result = super().copy()
+        result = Bag(super().copy())
         result._alias_dict = self._alias_dict.copy()
         return result
 
@@ -93,10 +93,6 @@ class Bag(set):
         result = super().pop()
         self._discard_aliases(result)
         return result
-
-    def remove(self, item):
-        super().remove(item)
-        self._discard_aliases(item)
 
     def symmetric_difference(self, other_bag):
         return Bag(super().symmetric_difference(other_bag))

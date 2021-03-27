@@ -47,7 +47,7 @@ class AI:
 
 
 class HatesPlayer(AI):
-    def choose_action(self, unused_room, impulse=None):
+    def choose_action(self, unused_room):
         # TODO: Is there an elegant way to make current_room aware of player?
         return _Action(Attack(target=G.player, method=None))
 
